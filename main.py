@@ -10,7 +10,6 @@ from tqdm import tqdm, tqdm_pandas
 
 tqdm.pandas()
 
-from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
@@ -113,39 +112,4 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 print(confusion_matrix(y_val, hasil_prediksi))
 print(classification_report(y_val, hasil_prediksi))
 print(accuracy_score(y_val, hasil_prediksi))
-# C_grid = [0.001, 0.01, 0.1, 1, 10]
-# gamma_grid = [0.001, 0.01, 0.1, 1, 10]
-# param_grid = {'C': C_grid, 'gamma' : gamma_grid}
-#
-# grid = GridSearchCV(SVC(kernel='rbf'), param_grid, cv = 3, scoring = "accuracy")
-# grid.fit(X_train, y_train)
-#
-# # Find the best model
-# print(grid.best_score_)
-#
-# print(grid.best_params_)
-#
-# print(grid.best_estimator_)
 
-# clf.fit(X_pca, y)
-# str_preds, _ = convert_to_labels(clf.predict_proba(X_test_pca), i2c, k=3)
-#
-# # Write to outputs
-# subm = pd.DataFrame()
-# subm['fname'] = audio_test_files
-# subm['label'] = str_preds
-# subm.to_csv('submission.csv', index=False)
-#
-# C_grid = [0.001, 0.01, 0.1, 1, 10]
-# gamma_grid = [0.001, 0.01, 0.1, 1, 10]
-# param_grid = {'C': C_grid, 'gamma' : gamma_grid}
-#
-# grid = GridSearchCV(SVC(kernel='rbf'), param_grid, cv = 3, scoring = "accuracy")
-# grid.fit(X_train, y_train)
-#
-# # Find the best model
-# print(grid.best_score_)
-#
-# print(grid.best_params_)
-#
-# print(grid.best_estimator_)
